@@ -1,0 +1,39 @@
+type Client @table {
+  name: String!
+  email: String!
+  phoneNumber: String
+  companyName: String
+  website: String
+}
+
+type Project @table {
+  title: String!
+  status: String!
+  startDate: Date!
+  endDate: Date
+  totalValue: Float
+  client: Client!
+}
+
+type Task @table {
+  title: String!
+  dueDate: Date!
+  isCompleted: Boolean!
+  description: String
+  project: Project!
+}
+
+type Note @table {
+  content: String!
+  createdAt: Timestamp!
+  author: String
+  client: Client
+  project: Project
+}
+
+type TeamMember @table {
+  name: String!
+  role: String!
+  email: String
+  avatarUrl: String
+}

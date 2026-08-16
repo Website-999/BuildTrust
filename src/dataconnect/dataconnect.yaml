@@ -1,0 +1,11 @@
+specVersion: "v1"
+serviceId: "src"
+location: "southamerica-west1"
+schemas:
+  - source: "./schema"
+    datasource:
+      postgresql:
+        database: "fdcdb"
+        cloudSql:
+          instanceId: "src-fdc"
+connectorDirs: ["./example"]
